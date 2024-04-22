@@ -63,15 +63,18 @@ class Tree:
 
     def deleteTree(self):
         # TODO 1
+        """Method for delete Tree(set root to None)"""
         self.root = None
 
     def printTree(self):
         # TODO 1
+        """Method for print the tree"""
         if self.root is not None:
             self._printInorderTree(self.root)
 
     def _printInorderTree(self, node):
         # TODO 1
+        """Method for print the Tree with in order traversal"""
         if node is not None:
             self._printInorderTree(node.left)
             print(str(node.data) + ' ')
@@ -79,10 +82,18 @@ class Tree:
 
     def _printPreorderTree(self, node):
         # TODO 2
-        pass
+        """Method for print the Tree with pre order traversal"""
+        if node is not None:
+            self._printPreorderTree(self, node.left)
+            print(str(node.data) + ' ')
+            self._printPreorderTree(self, node.right)
 
     def _printPostorderTree(self, node):
         # TODO 2
-        pass
+        """Method for print the tree with post order traversal"""
+        if node is not None:
+            self._printPostorderTree(self, node.left)
+            self._printPostorderTree(self, node.right)
+            print(str(node.data) + ' ')
 
 
