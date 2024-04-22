@@ -1,9 +1,7 @@
 name: 🚀 Run
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   run:
