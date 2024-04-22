@@ -15,6 +15,5 @@ jobs:
 
       - name: Testing code
         shell: bash
-        run: |
-          pytest treeTest.py
+        run: python tree.py
         
