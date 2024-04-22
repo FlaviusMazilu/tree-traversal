@@ -18,5 +18,5 @@ jobs:
       - name: Testing code
         shell: bash
         run: |
-          echo $(ls ${{ github.workspace }})
+          pytest treeTest.py
         
